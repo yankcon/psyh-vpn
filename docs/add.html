@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Добавить в Happ</title>
+</head>
+<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 24px;">
+  <h2>Добавление подписки в Happ</h2>
+
+  <p>Если Happ установлен — он попытается открыться автоматически. Если не открылся, нажми кнопку ниже:</p>
+
+  <p>
+    <a id="open"
+       href="happ://add/https%3A%2F%2Fraw.githubusercontent.com%2Fyankcon%2Fpsyh-vpn%2Frefs%2Fheads%2Fmain%2Fsub.txt"
+       style="display:inline-block;padding:12px 16px;border-radius:12px;background:#000;color:#fff;text-decoration:none;">
+      ➕ Добавить в Happ
+    </a>
+  </p>
+
+  <p style="opacity:.75">
+    Если Telegram открыл страницу “внутри себя” и Happ не запускается — нажми ⋯ → “Открыть в браузере” и повтори.
+  </p>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = document.getElementById('open').href;
+    }, 150);
+  </script>
+</body>
+</html>
