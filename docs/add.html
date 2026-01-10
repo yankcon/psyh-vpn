@@ -8,11 +8,11 @@
 <body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 24px; line-height: 1.45;">
   <h2>Добавление подписки в Happ</h2>
 
-  <p>Сейчас открою Happ и предложу добавить подписку. Если не открылось — нажми кнопку ниже.</p>
+  <p>Если Happ установлен — он откроется и предложит добавить подписку. Если не открылся — нажми кнопку ниже.</p>
 
   <p>
     <a id="open"
-       href="happ://add/https://raw.githubusercontent.com/yankcon/psyh-vpn/main/sub.txt"
+       href="happ://add/https://raw.githubusercontent.com/yankcon/psyh-vpn/refs/heads/main/sub.txt"
        style="display:inline-block;padding:12px 16px;border-radius:12px;background:#000;color:#fff;text-decoration:none;">
       ➕ Добавить в Happ
     </a>
@@ -23,7 +23,6 @@
   </p>
 
   <script>
-    // Попытка авто-открытия Happ
     setTimeout(() => {
       window.location.href = document.getElementById('open').href;
     }, 150);
