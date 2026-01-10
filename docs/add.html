@@ -1,44 +1,24 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Добавить в Happ</title>
+  <title></title>
+  <style>
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #fff; }
+  </style>
 </head>
-<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 24px; line-height: 1.45;">
-  <h2>Добавление подписки в Happ</h2>
-
-  <p>Сейчас попробую открыть Happ и добавить подписку. Если не открылось — нажми кнопку ниже.</p>
-
-  <p>
-    <a id="open"
-       href="happ://add/https://raw.githubusercontent.com/yankcon/psyh-vpn/refs/heads/main/sub.txt"
-       style="display:inline-block;padding:12px 16px;border-radius:12px;background:#000;color:#fff;text-decoration:none;">
-      ➕ Добавить в Happ
-    </a>
-  </p>
-
-  <p style="opacity:.75; margin-top: 16px;">
-    Если Telegram открыл страницу “внутри себя” и Happ не запускается — нажми ⋯ → “Открыть в браузере”, затем снова кнопку.
-  </p>
-
-  <hr style="margin: 20px 0; opacity: .25;" />
-
-  <p style="margin: 0 0 10px 0;">Если Happ не установлен:</p>
-  <p style="display:flex; gap:10px; flex-wrap:wrap; margin:0;">
-    <a href="https://apps.apple.com/ru/app/happ-proxy-utility/id6503604371"
-       style="display:inline-block;padding:10px 14px;border-radius:12px;background:#f1f1f1;color:#000;text-decoration:none;">
-       App Store
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=su.happ.happ"
-       style="display:inline-block;padding:10px 14px;border-radius:12px;background:#f1f1f1;color:#000;text-decoration:none;">
-      ▶ Google Play
-    </a>
-  </p>
-
+<body>
   <script>
+    // Твой рабочий deeplink (как ты подтвердил)
+    const deeplink = "happ://add/https://raw.githubusercontent.com/yankcon/psyh-vpn/refs/heads/main/sub.txt";
+
+    // Пытаемся открыть как можно раньше
+    window.location.replace(deeplink);
+
+    // Дубль-выстрел на всякий случай (некоторые webview капризные)
     setTimeout(() => {
-      window.location.href = document.getElementById('open').href;
+      window.location.href = deeplink;
     }, 150);
   </script>
 </body>
